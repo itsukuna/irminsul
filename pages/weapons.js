@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import WeaponCard from '@/components/weaponCard';
+import Head from 'next/head';
 
 export async function getStaticProps() {
     const dataDirectory = path.join(process.cwd(), 'assets', 'weapons');
@@ -56,14 +57,19 @@ export default function Weapons({ cards }) {
     ));
 
     return (
-        <div className="min-h-screen">
-            <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-                <div className="px-4 py-6 sm:px-0">
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                        {cardItems}
+        <>
+            <Head>
+                <title>Weapons Page</title>
+            </Head>
+            <div className="min-h-screen">
+                <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                    <div className="px-4 py-6 sm:px-0">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                            {cardItems}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
