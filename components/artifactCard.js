@@ -1,4 +1,4 @@
-export default function ArtifactCard({ title, rarity, onePieceBonus, twoPieceBonus, fourPieceBonus }) {
+export default function ArtifactCard({ name, rarity, onePieceBonus, twoPieceBonus, fourPieceBonus }) {
 
     const stars = "⭐️".repeat(rarity);
 
@@ -8,7 +8,7 @@ export default function ArtifactCard({ title, rarity, onePieceBonus, twoPieceBon
                 {`::-webkit-scrollbar { display: none; }`}
             </style>
             <div className="p-4">
-                <div className="font-bold text-xl mb-2 text-white">{title}</div>
+                <div className="font-bold text-xl mb-2 text-white">{name}</div>
                 <div className="text-white mb-4"><span className="font-bold">Rarity:</span> {stars}</div>
                 {onePieceBonus && (
                     <div className="text-white mb-2">
