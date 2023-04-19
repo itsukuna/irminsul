@@ -1,0 +1,13 @@
+
+export default {
+    name: "Dragon's Bane",
+    weaponType: "Polearm",
+    rarity: 4,
+    baseAttack: 41,
+    subStat: "Elemental Mastery",
+    passiveName: "Bane of Flame and Water",
+    passiveDesc: "Increases DMG against enemies affected by Hydro or Pyro by 20/24/28/32/36%.",
+    location: "Gacha",
+    ascensionMaterial: "elixir"
+}
+                

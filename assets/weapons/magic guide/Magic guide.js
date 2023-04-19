@@ -1,0 +1,13 @@
+
+export default {
+    name: "Magic Guide",
+    weaponType: "Catalyst",
+    rarity: 3,
+    baseAttack: 38,
+    subStat: "Elemental Mastery",
+    passiveName: "Bane of Storm and Tide",
+    passiveDesc: "Increases DMG against enemies affected by Hydro or Electro by 12/15/18/21/24%.",
+    location: "Gacha",
+    ascensionMaterial: "decarabian"
+}
+                
