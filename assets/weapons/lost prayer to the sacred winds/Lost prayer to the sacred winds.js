@@ -1,0 +1,13 @@
+
+export default {
+    name: "Lost Prayer to the Sacred Winds",
+    weaponType: "Catalyst",
+    rarity: 5,
+    baseAttack: 44,
+    subStat: "CRIT Rate",
+    passiveName: "Boundless Blessing",
+    passiveDesc: "Increases Movement SPD by 10%. When in battle, earn a 6/8/10/12/14% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",
+    location: "Gacha",
+    ascensionMaterial: "dandelion"
+}
+                

@@ -1,51 +1,11 @@
-import fs from 'fs';
-import path from 'path';
+import weapon from '@/assets/weapons/weapon';
 import WeaponCard from '@/components/weaponCard';
 import Head from 'next/head';
 
-export async function getStaticProps() {
-    const dataDirectory = path.join(process.cwd(), 'assets', 'weapons');
-
-    const getFilesRecursively = function (directory) {
-        const files = fs.readdirSync(directory);
-        let fileList = [];
-        for (let i = 0; i < files.length; i++) {
-            const filePath = path.join(directory, files[i]);
-            const fileStat = fs.statSync(filePath);
-            if (fileStat.isDirectory()) {
-                const subdirectoryFiles = getFilesRecursively(filePath);
-                fileList = fileList.concat(subdirectoryFiles);
-            } else {
-                fileList.push(filePath);
-            }
-        }
-        return fileList;
-    };
-
-    const fileNames = getFilesRecursively(dataDirectory);
-
-    const cards = fileNames.map(fileName => {
-        const fileContents = fs.readFileSync(fileName, 'utf8');
-        const data = JSON.parse(fileContents);
-        return {
-            fileName: fileName,
-            name: data.name,
-            weaponType: data.weaponType,
-            rarity: data.rarity,
-            baseAttack: data.baseAttack,
-            subStat: data.subStat,
-            passiveName: data.passiveName,
-            passiveDesc: data.passiveDesc,
-        };
-    });
-
-    return { props: { cards } };
-}
-
-export default function Weapons({ cards }) {
-    const cardItems = cards.map(card => (
+export default function Weapons() {
+    const cardItems = weapon.map((card, index) => (
         <WeaponCard
-            key={card.fileName}
+            key={index}
             name={card.name}
             weaponType={card.weaponType}
             rarity={card.rarity}

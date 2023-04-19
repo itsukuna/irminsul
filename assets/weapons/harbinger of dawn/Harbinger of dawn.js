@@ -1,0 +1,13 @@
+
+export default {
+    name: "Harbinger of Dawn",
+    weaponType: "Sword",
+    rarity: 3,
+    baseAttack: 39,
+    subStat: "CRIT DMG",
+    passiveName: "Vigorous",
+    passiveDesc: "When HP is above 90%, increases CRIT Rate by 14/18/22/24/28%.",
+    location: "Gacha",
+    ascensionMaterial: "boreal"
+}
+                

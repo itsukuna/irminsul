@@ -1,0 +1,13 @@
+
+export default {
+    name: "Royal Bow",
+    weaponType: "Bow",
+    rarity: 4,
+    baseAttack: 42,
+    subStat: "ATK",
+    passiveName: "Focus",
+    passiveDesc: "Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
+    location: "Starglitter Exchange",
+    ascensionMaterial: "dandelion"
+}
+                

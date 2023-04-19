@@ -1,0 +1,13 @@
+
+export default {
+    name: "Lithic Spear",
+    weaponType: "Polearm",
+    rarity: 4,
+    baseAttack: 42,
+    subStat: "ATK",
+    passiveName: "Lithic Axiom - Unity",
+    passiveDesc: "For every character in the party who hails from Liyue, the character who equips this weapon gains 7/8/9/10/11% ATK increase and a 3/4/5/6/7% CRIT Rate increase. This effect stacks up to 4 times.",
+    location: "Gacha",
+    ascensionMaterial: "aerosiderite"
+}
+                
