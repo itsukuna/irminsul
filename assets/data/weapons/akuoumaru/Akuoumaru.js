@@ -10,4 +10,3 @@ export default {
     location: "Gacha",
     ascensionMaterial: "distantant-sea"
 }
-                
