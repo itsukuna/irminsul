@@ -1,33 +1,51 @@
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import HamburgerButton from './buttons/hamburgerButton';
 
 const Navbar = () => {
     const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const links = [
+        { href: '/', label: 'Home' },
+        { href: '/artifacts', label: 'Artifacts' },
+        { href: '/weapons', label: 'Weapons' },
+    ];
+
     return (
         <nav className="bg-gray-600">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
-                    <div className="flex items-center">
-                        <div className="flex-shrink-0 text-sm">
-                            Irminsul
+                    <div className="flex-shrink-0">Irminsul</div>
+                    <div className="hidden md:block">
+                        <div className="ml-10 flex items-baseline space-x-4">
+                            {links.map(({ href, label }) => (
+                                <Link key={href} href={href} className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${router.pathname === href ? 'bg-gray-700 text-white' : ''}`}>
+                                    {label}
+                                </Link>
+                            ))}
                         </div>
-                        <div className="block sm:hidden ml-2">
-                            <button type="button" className="text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none focus:bg-gray-700 focus:text-white px-2 py-1 rounded-md">
-                                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="hidden sm:block">
-                            <div className="ml-4 flex items-baseline space-x-2">
-                                <Link href="/" className={`text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-1 rounded-md text-xs font-medium ${router.pathname === '/' ? 'bg-gray-700 text-white' : ''}`}>Home</Link>
-                                <Link href="/artifacts" className={`text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-1 rounded-md text-xs font-medium ${router.pathname === '/artifacts' ? 'bg-gray-700 text-white' : ''}`}>Artifacts</Link>
-                                <Link href="/weapons" className={`text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-1 rounded-md text-xs font-medium ${router.pathname === '/weapons' ? 'bg-gray-700 text-white' : ''}`}>Weapons</Link>
-                            </div>
-                        </div>
+                    </div>
+                    <div className="block md:hidden">
+                        <HamburgerButton isOpen={isOpen} onClick={toggleMenu} />
                     </div>
                 </div>
             </div>
+            {isOpen && (
+                <div className="md:hidden">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        {links.map(({ href, label }) => (
+                            <Link key={href} href={href} className={`text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${router.pathname === href ? 'bg-gray-700 text-white' : ''}`}>
+
+                                {label}
+
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };

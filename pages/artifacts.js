@@ -1,4 +1,4 @@
-import ArtifactCard from '@/components/artifactCard';
+import ArtifactCard from '@/components/cards/artifactCard';
 import Head from 'next/head';
 import artifact from '@/assets/artifacts/artifact';
 
