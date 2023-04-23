@@ -12,6 +12,7 @@ const Navbar = () => {
         { href: '/', label: 'Home' },
         { href: '/artifacts', label: 'Artifacts' },
         { href: '/weapons', label: 'Weapons' },
+        { href: '/characters', label: 'Characters' }
     ];
 
     const handleLinkClick = () => {
