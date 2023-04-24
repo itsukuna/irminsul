@@ -5,9 +5,8 @@ import Link from 'next/link';
 
 export default function Characters() {
     const characterList = characters.map((character) => (
-        <Link href={`/characters/${character.slug}`}>
+        <Link href={`/characters/${encodeURIComponent(character.name)}`} key={character.name}>
             <CharacterCard
-                key={character.name}
                 name={character.name}
                 icon={character.icon}
                 rarity={character.rarity}
