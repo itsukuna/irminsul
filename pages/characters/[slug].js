@@ -17,11 +17,8 @@ export default function CharacterPage() {
             <div className="px-4 py-6 sm:px-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <Image src={character.icon} width={400} height={400} />
-                    </div>
-                    <div>
-                        <h1 className="text-4xl font-bold mb-4">{character.name}</h1>
-                        <p className="text-xl font-medium mb-4">Rarity: {character.rarity}</p>
+                        <h1 className="text-4xl font-bold mb-4">Work In Progress</h1>
+                        <p className="text-xl font-medium mb-4">Update Soon</p>
                         {/* Add other character details here */}
                     </div>
                 </div>
