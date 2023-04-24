@@ -1,0 +1,15 @@
+{
+	"create character snippet": {
+		"prefix": "gcs",
+		"body": [
+			"import { images } from \"./statics/images\";",
+			"",
+			"export default {",
+			"    name: \"${1:name}\",",
+			"    rarity: ${2:5},",
+			"    icon: images.iconBig",
+			"}"
+		],
+		"description": "create character snippet"
+	}
+}

@@ -1,6 +1,6 @@
 import ArtifactCard from '@/components/cards/artifactCard';
 import Head from 'next/head';
-import artifact from '@/assets/artifacts/artifact';
+import artifact from '@/assets/data/artifacts/artifact';
 
 export default function Artifacts() {
     const cardItems = artifact.map((card, index) => (
@@ -22,7 +22,7 @@ export default function Artifacts() {
             <div className="min-h-screen">
                 <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div className="px-4 py-6 sm:px-0">
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center align-items-center">
                             {cardItems}
                         </div>
                     </div>

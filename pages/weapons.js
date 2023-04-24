@@ -1,4 +1,4 @@
-import weapon from '@/assets/weapons/weapon';
+import weapon from '@/assets/data/weapons/weapon';
 import WeaponCard from '@/components/cards/weaponCard';
 import Head from 'next/head';
 
