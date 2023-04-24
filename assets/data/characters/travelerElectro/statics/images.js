@@ -1,5 +1,5 @@
 import card from './card.png'
-import constellation from './constellation.png'
+// import constellation from './constellation.png'
 import constellationOne from './constellation-1.png'
 import constellationTwo from './constellation-2.png'
 import constellationThree from './constellation-3.png'
@@ -20,7 +20,7 @@ import talentSkill from './talent-skill.png'
 
 export const images = {
     card,
-    constellation,
+    // constellation,
     constellationOne,
     constellationTwo,
     constellationThree,
