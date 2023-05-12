@@ -21,7 +21,7 @@ const Home = () => {
         <title>Irmisul</title>
       </Head>
 
-      <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
+      <Grid container spacing={4} justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
         {characters.map((character) => (
           <Grid item key={character.name} xs={12} sm={6} md={4} lg={3}>
             <div onClick={() => handleCharacterClick(character.name)}>
