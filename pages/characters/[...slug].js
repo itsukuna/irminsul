@@ -1,5 +1,4 @@
-import characters from '@/assets/data/characters/character';
-import Image from 'next/image';
+import characters from '@/data/characters/characterList';
 import { useRouter } from 'next/router';
 
 export default function CharacterPage() {

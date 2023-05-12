@@ -1,15 +1,20 @@
 {
-	"create character snippet": {
+	"Character Snippet": {
 		"prefix": "gcs",
 		"body": [
-			"import { images } from \"./statics/images\";",
+			"import icon from \"@/data/characters/${1:name}/Icon.webp\"",
+			"import portrait from \"@/data/characters/${1:name}/Portrait.webp\"",
 			"",
 			"export default {",
-			"    name: \"${1:name}\",",
-			"    rarity: ${2:5},",
-			"    icon: images.iconBig",
-			"}"
+			"    name: \"${2:name}\",",
+			"    vision: \"${3:vision type}\",",
+			"    weaponType: \"${4:weapon Type}\",",
+			"    rarity: ${5:rarity},",
+			"    icon: icon,",
+			"    portrait: portrait",
+			"}",
+			""
 		],
-		"description": "create character snippet"
+		"description": "Character Snippet"
 	}
 }
