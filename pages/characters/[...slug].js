@@ -1,6 +1,6 @@
-import characters from '@/assets/data/characters/character';
-import Image from 'next/image';
+import characters from '@/data/characters/characterList';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function CharacterPage() {
     const router = useRouter();
@@ -17,8 +17,12 @@ export default function CharacterPage() {
             <div className="px-4 py-6 sm:px-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
+                        <Image src={character.portrait} />
+                    </div>
+                    <div>
                         <h1 className="text-4xl font-bold mb-4">Work In Progress</h1>
                         <p className="text-xl font-medium mb-4">Update Soon</p>
+
                         {/* Add other character details here */}
                     </div>
                 </div>

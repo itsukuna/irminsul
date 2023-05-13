@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import HamburgerButton from '../buttons/hamburgerButton';
+import { AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
     const router = useRouter();
@@ -10,9 +11,7 @@ const Navbar = () => {
 
     const links = [
         { href: '/', label: 'Home' },
-        { href: '/artifacts', label: 'Artifacts' },
-        { href: '/weapons', label: 'Weapons' },
-        { href: '/characters', label: 'Characters' }
+        // Add more links as needed
     ];
 
     const handleLinkClick = () => {
@@ -20,52 +19,72 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-600">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
-                    <div className="flex-shrink-0">Irminsul</div>
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
-                            {links.map(({ href, label }) => (
-                                <Link
-                                    key={href}
-                                    href={href}
-                                    onClick={handleLinkClick}
-                                    className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${router.pathname === href ? 'bg-gray-700 text-white' : ''
-                                        }`}
-                                >
-                                    {label}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="flex-1 flex items-center justify-end">
-
-                        <div className="block md:hidden">
-                            <HamburgerButton isOpen={isOpen} onClick={toggleMenu} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {isOpen && (
-                <div className="md:hidden">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
+        <AppBar position="static">
+            <Toolbar>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Irminsul
+                </Typography>
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={toggleMenu}
+                    sx={{ display: { md: 'none' } }}
+                >
+                    <MenuIcon />
+                </IconButton>
+                <div className="hidden md:block">
+                    <div className="ml-10 flex items-baseline space-x-4">
                         {links.map(({ href, label }) => (
                             <Link
                                 key={href}
                                 href={href}
                                 onClick={handleLinkClick}
-                                className={`text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${router.pathname === href ? 'bg-gray-700 text-white' : ''
-                                    }`}
+                                passHref
+                                underline="none"
                             >
-                                {label}
+                                <Button
+                                    color="inherit"
+                                    sx={{
+                                        textTransform: 'capitalize',
+                                        fontWeight: router.pathname === href ? 'bold' : 'normal',
+                                    }}
+                                >
+                                    {label}
+                                </Button>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </Toolbar>
+            {isOpen && (
+                <div className="md:hidden">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        {links.map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                onClick={handleLinkClick}
+                                passHref
+                                underline="none"
+                            >
+                                <Button
+                                    color="inherit"
+                                    fullWidth
+                                    sx={{
+                                        textTransform: 'capitalize',
+                                        fontWeight: router.pathname === href ? 'bold' : 'normal',
+                                    }}
+                                >
+                                    {label}
+                                </Button>
                             </Link>
                         ))}
                     </div>
                 </div>
             )}
-        </nav>
+        </AppBar>
     );
 };
 
