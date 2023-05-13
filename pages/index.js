@@ -23,7 +23,7 @@ const Home = () => {
 
       <Grid container spacing={4} justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
         {characters.map((character) => (
-          <Grid item key={character.name} xs={12} sm={6} md={4} lg={3}>
+          <Grid item key={character.name}>
             <div onClick={() => handleCharacterClick(character.name)}>
               <CharacterButton character={character} />
             </div>

@@ -2,8 +2,8 @@
 	"Character Snippet": {
 		"prefix": "gcs",
 		"body": [
-			"import icon from \"@/data/characters/${1:name}/Icon.webp\"",
-			"import portrait from \"@/data/characters/${1:name}/Portrait.webp\"",
+			"import icon from \"@/data/characters/${1:folder}/${2:name}_Icon.png\"",
+			"import portrait from \"@/data/characters/${1:folder}/Portrait.png\"",
 			"",
 			"export default {",
 			"    name: \"${2:name}\",",

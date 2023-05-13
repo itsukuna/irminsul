@@ -1,5 +1,5 @@
 import icon from "@/data/characters/amber/Icon.webp"
-import portrait from "@/data/characters/amber/Portrait.webp"
+import portrait from "@/data/characters/amber/Portrait.png"
 
 export default {
     name: "amber",

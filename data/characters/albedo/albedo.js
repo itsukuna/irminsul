@@ -4,7 +4,7 @@ import portrait from "@/data/characters/albedo/Portrait.webp"
 export default {
     name: "Albedo",
     vision: "Geo",
-    weaponType: "swoard",
+    weaponType: "sword",
     rarity: 5,
     icon: icon,
     portrait: portrait
