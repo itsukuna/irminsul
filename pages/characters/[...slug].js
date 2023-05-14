@@ -29,16 +29,20 @@ export default function CharacterPage({ character }) {
     );
 }
 
-export async function getServerSideProps(context) {
-    const { slug } = context.query;
-    const decodedSlug = decodeURIComponent(slug);
-    const character = characters.find((c) => c.name === decodedSlug);
+export async function getStaticPaths() {
+    const paths = characters.map((character) => ({
+        params: { slug: [encodeURIComponent(character.name)] },
+    }));
 
-    if (!character) {
-        return {
-            notFound: true,
-        };
-    }
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps({ params }) {
+    const decodedSlug = decodeURIComponent(params.slug);
+    const character = characters.find((c) => c.name === decodedSlug);
 
     return {
         props: {
