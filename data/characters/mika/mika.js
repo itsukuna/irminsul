@@ -2,6 +2,7 @@ import icon from "@/data/characters/mika/Mika_Icon.png"
 import portrait from "@/data/characters/mika/Portrait.webp"
 
 export default {
+    key: "mika",
     name: "Mika",
     vision: "Cryo",
     weaponType: "Polearm",

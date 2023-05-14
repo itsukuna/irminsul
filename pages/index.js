@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ['latin'] });
 const Home = () => {
   const router = useRouter();
 
-  const handleCharacterClick = (characterName) => {
-    router.push(`/characters/${encodeURIComponent(characterName)}`);
+  const handleCharacterClick = (key) => {
+    router.push(`/characters/${encodeURIComponent(key)}`);
   };
 
   return (
@@ -23,8 +23,8 @@ const Home = () => {
 
       <Grid container spacing={4} justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
         {characters.map((character) => (
-          <Grid item key={character.name}>
-            <div onClick={() => handleCharacterClick(character.name)}>
+          <Grid item key={character.key}>
+            <div onClick={() => handleCharacterClick(character.key)}>
               <CharacterButton character={character} />
             </div>
           </Grid>

@@ -2,6 +2,7 @@ import icon from "@/data/characters/aloy/Icon.png"
 import portrait from "@/data/characters/aloy/Portrait.png"
 
 export default {
+    key: "aloy",
     name: "Aloy",
     vision: "Cryo",
     weaponType: "Bow",

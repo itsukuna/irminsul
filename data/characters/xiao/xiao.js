@@ -2,6 +2,7 @@ import icon from "@/data/characters/xiao/Xiao_Icon.png"
 import portrait from "@/data/characters/xiao/Portrait.png"
 
 export default {
+    key: "xiao",
     name: "Xiao",
     vision: "Anemo",
     weaponType: "Polearm",

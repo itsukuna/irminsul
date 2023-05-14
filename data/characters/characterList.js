@@ -29,6 +29,7 @@ import kaveh from "./kaveh/kaveh";
 import keqing from "./keqing/keqing";
 import klee from "./klee/klee";
 import kujouSara from "./kujouSara/kujouSara";
+import kukiShinobu from "./kukiShinobu/kukiShinobu";
 import layla from "./layla/layla";
 import lisa from "./lisa/lisa";
 import mika from "./mika/mika";
@@ -95,6 +96,7 @@ export default [
     keqing,
     klee,
     kujouSara,
+    kukiShinobu,
     layla,
     lisa,
     mika,

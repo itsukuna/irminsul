@@ -2,6 +2,7 @@ import icon from "@/data/characters/keqing/Keqing_Icon.png"
 import portrait from "@/data/characters/keqing/Portrait.png"
 
 export default {
+    key: "keqing",
     name: "Keqing",
     vision: "Electro",
     weaponType: "Sword",

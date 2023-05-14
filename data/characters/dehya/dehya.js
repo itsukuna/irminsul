@@ -2,6 +2,7 @@ import icon from "@/data/characters/dehya/Icon.png"
 import portrait from "@/data/characters/dehya/Portrait.png"
 
 export default {
+    key: "dehya",
     name: "Dehya",
     vision: "Pyro",
     weaponType: "Claymore",

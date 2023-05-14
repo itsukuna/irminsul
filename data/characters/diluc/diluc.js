@@ -2,6 +2,7 @@ import icon from "@/data/characters/diluc/Diluc_Icon.png"
 import portrait from "@/data/characters/diluc/Portrait.png"
 
 export default {
+    key: "diluc",
     name: "Diluc",
     vision: "Pyro",
     weaponType: "Claymore",

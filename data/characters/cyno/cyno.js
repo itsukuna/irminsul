@@ -2,6 +2,7 @@ import icon from "@/data/characters/cyno/Icon.png"
 import portrait from "@/data/characters/cyno/Portrait.png"
 
 export default {
+    key: "cyno",
     name: "Cyno",
     vision: "Electro",
     weaponType: "Polearm",

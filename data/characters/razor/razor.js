@@ -2,6 +2,7 @@ import icon from "@/data/characters/razor/Razor_Icon.png"
 import portrait from "@/data/characters/razor/Portrait.png"
 
 export default {
+    key: "razor",
     name: "Razor",
     vision: "Electro",
     weaponType: "Claymore",
