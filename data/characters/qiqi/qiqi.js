@@ -2,6 +2,7 @@ import icon from "@/data/characters/qiqi/Qiqi_Icon.png"
 import portrait from "@/data/characters/qiqi/Portrait.png"
 
 export default {
+    key: "qiqi",
     name: "Qiqi",
     vision: "Cryo",
     weaponType: "Sword",

@@ -2,6 +2,7 @@ import icon from "@/data/characters/klee/Klee_Icon.png"
 import portrait from "@/data/characters/klee/Portrait.png"
 
 export default {
+    key: "klee",
     name: "Klee",
     vision: "Pyro",
     weaponType: "Catalyst",

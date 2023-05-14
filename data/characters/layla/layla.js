@@ -2,6 +2,7 @@ import icon from "@/data/characters/layla/Layla_Icon.png"
 import portrait from "@/data/characters/layla/Portrait.png"
 
 export default {
+    key: "layla",
     name: "Layla",
     vision: "Cryo",
     weaponType: "Sword",

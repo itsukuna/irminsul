@@ -2,6 +2,7 @@ import icon from "@/data/characters/xinyan/Xinyan_Icon.png"
 import portrait from "@/data/characters/xinyan/Portrait.png"
 
 export default {
+    key: "xinyan",
     name: "Xinyan",
     vision: "Pyro",
     weaponType: "Claymore",

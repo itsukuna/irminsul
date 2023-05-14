@@ -2,6 +2,7 @@ import icon from "@/data/characters/yoimiya/Yoimiya_Icon.png"
 import portrait from "@/data/characters/yoimiya/Portrait.png"
 
 export default {
+    key: "yoimiya",
     name: "Yoimiya",
     vision: "Pyro",
     weaponType: "Bow",

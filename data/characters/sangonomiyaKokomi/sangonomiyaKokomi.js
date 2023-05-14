@@ -2,6 +2,7 @@ import icon from "@/data/characters/sangonomiyaKokomi/Sangonomiya_Kokomi_Icon.pn
 import portrait from "@/data/characters/sangonomiyaKokomi/Portrait.png"
 
 export default {
+    key: "sangonomiyaKokomi",
     name: "Sangonomiya Kokomi",
     vision: "Hydro",
     weaponType: "Catalyst",

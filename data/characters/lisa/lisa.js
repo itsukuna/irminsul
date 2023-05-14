@@ -2,6 +2,7 @@ import icon from "@/data/characters/lisa/Lisa_Icon.png"
 import portrait from "@/data/characters/lisa/Portrait.png"
 
 export default {
+    key: "lisa",
     name: "Lisa",
     vision: "Electro",
     weaponType: "Catalyst",
