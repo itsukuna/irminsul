@@ -3,7 +3,7 @@ import portrait from "@/data/characters/keqing/Portrait.png"
 
 export default {
     name: "Keqing",
-    vision: "Electri",
+    vision: "Electro",
     weaponType: "Sword",
     rarity: 5,
     icon: icon,

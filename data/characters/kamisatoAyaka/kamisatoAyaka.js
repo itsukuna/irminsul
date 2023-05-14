@@ -3,8 +3,8 @@ import portrait from "@/data/characters/kamisatoAyaka/Portrait.webp"
 
 export default {
     name: "Kamisato Ayaka",
-    vision: "Kamisato Ayaka",
-    weaponType: "Swoard",
+    vision: "Cryo",
+    weaponType: "Sword",
     rarity: 5,
     icon: icon,
     portrait: portrait
