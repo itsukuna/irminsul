@@ -12,7 +12,7 @@ const Home = () => {
   const router = useRouter();
 
   const handleCharacterClick = (key) => {
-    router.push(`/characters/${encodeURIComponent(key)}`);
+    router.push(`/character/${encodeURIComponent(key)}`);
   };
 
   return (
