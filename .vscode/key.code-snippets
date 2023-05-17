@@ -1,9 +1,0 @@
-{
-	"genrate key": {
-		"prefix": "key",
-		"body": [
-			"key: \"${1:key}\",",
-		],
-		"description": "genrate key"
-	}
-}
