@@ -9,7 +9,7 @@ const CharacterButton = ({ character }) => {
         <Button component="a" variant="contained" color="primary" sx={{ width: 150, height: 200 }}>
             <div style={{ textAlign: 'center' }}>
                 <Image src={icon} alt={name} width={120} height={120} />
-                <Typography variant="h6">{name}</Typography>
+                <Typography >{name}</Typography>
             </div>
         </Button>
     );
