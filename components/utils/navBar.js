@@ -19,7 +19,7 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ height: '64px' }}>
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     Irminsul
@@ -30,12 +30,12 @@ const Navbar = () => {
                     color="inherit"
                     aria-label="menu"
                     onClick={toggleMenu}
-                    sx={{ display: { md: 'none' } }}
+                    sx={{ display: { sm: 'none' } }}
                 >
                     <MenuIcon />
                 </IconButton>
-                <div className="hidden md:block">
-                    <div className="ml-10 flex items-baseline space-x-4">
+                <div className="hidden sm:block">
+                    <div className="ml-4 flex items-center space-x-2">
                         {links.map(({ href, label }) => (
                             <Link
                                 key={href}
@@ -59,7 +59,7 @@ const Navbar = () => {
                 </div>
             </Toolbar>
             {isOpen && (
-                <div className="md:hidden">
+                <div className="sm:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {links.map(({ href, label }) => (
                             <Link
