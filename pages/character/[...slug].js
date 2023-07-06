@@ -14,7 +14,7 @@ export default function CharacterPage({ character }) {
             <div className="px-4 py-6 sm:px-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <Image src={character.portrait} alt={character.name} />
+                        <Image src={character.portrait} alt={character.name} width={500} height={800} />
                     </div>
                     <div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 ">
